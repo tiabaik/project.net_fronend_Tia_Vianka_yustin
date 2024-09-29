@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "List Borrower";
+    Layout = "_LayoutLender";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">List Borrower</h1>
+</div>
+<table class="table-stripped table" id="userTableListBorrower">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Interest Rate</th>
+            <th>Duration</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<!------MODAL KONFIRMASI-->
+<div class="modal fade" id="confirmLoanModal" tabindex="-1" role="dialog" aria-labelledby="confirmLoanModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmLoanModalLabel">Confirm Loan</h5>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to confirm this loan?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success" onclick="approveFunding()">Confirm</button>
+            </div>
+            <input type="hidden" id="fundingApprovedId" />
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/listborrower.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
